@@ -34,6 +34,7 @@ int main(int argv, char* argc)
 	send(sock, "890", strlen("890"), MSG_OOB);
 
 	close(sock);
+	return 0;
 }
 
 void error_handling(char *message)
