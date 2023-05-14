@@ -64,7 +64,7 @@ unsigned WINAPI RequestHandler(void *arg)
 	char fileName[BUF_SIZE];
 
 	recv(hClntSock, buf, BUF_SIZE, 0);
-	if(strstr(bufm "HTTP/") == NULL)	// 查看是否为HTTP提出的请求
+	if(strstr(buf, "HTTP/") == NULL)	// 查看是否为HTTP提出的请求
 	{
 		SendErrorMSG(hClntSock);
 		closesocket(hClntSock);
